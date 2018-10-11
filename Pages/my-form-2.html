@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+  <!-- Compiled and minified JavaScript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+  <title>Document</title>
+</head>
+<body>
+  <h1>Super Fun Form!</h1>
+  <form id="frm1" onsubmit="event.preventDefault(); submitThis(event);" action="somepath/login.php" >
+    <fieldset>
+    <legend>Who are you?</legend>
+    <input onchange="onInputChange(event)" id="firstname" type="text" name="firstname" placeholder="First Name" />
+    <br>
+    <input onchange="onInputChange(event)" id="lastname" type="text" name="lastname" placeholder="Last Name" />
+    <br>
+    <select onchange="onInputChange(event)" id="select_make" name="model" >
+      <option value="Freshman">Freshman</option>
+      <option value="Sophomore">Sophomore</option>
+      <option value="Junior">Junior</option>
+      <option value="Senior">Senior</option>
+    </select>
+    <br>
+  </fieldset>
+  <fieldset onchange="onInputChange(event)">
+    <legend>Who is your favorite person in this planet?</legend>
+    <input type="checkbox" value="Whomever created this" name="creator"><label>Whomever created this</label>
+    <br>
+    <input type="checkbox" value="Byron" name="Byron"><label>Byron</label>
+    <br>
+    <input type="checkbox" value="Sly" name="Sly"><label>Sly</label>
+    <br>
+    <input type="checkbox" value="All of the above" name="Above"><label>All of the above</label>
+    <br>
+    <input type="checkbox" value="Adan because he helped" name="Adan"><label>Adan because he helped</label>
+    <br>
+    <input type="checkbox" value="I plead the 5th" name="fifth"><label>I plead the 5th</label>
+    <br>
+  </fieldset>
+    <button type="submit"> Submit </button>
+  </form>
+  
+  <script>
+    const state = {
+      firstname: "",
+      lastname: "",
+      model: "Freshman"
+      
+
+    }
+    function onInputChange(e) {
+      state[e.target.name] = e.target.value
+    }
+
+    function submitThis() {
+      var str = JSON.stringify(state);
+      str = JSON.stringify(state, null, 4); // (Optional) beautiful indented output.
+      console.log(str); // Logs output to dev tools console.
+      alert(str); // Displays output using window.alert()
+    }
+  </script>
+</body>
+</html>
