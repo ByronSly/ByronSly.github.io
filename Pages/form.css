@@ -1,0 +1,39 @@
+#Super{
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(39, 8, 80);
+    text-align: center;
+}
+*{
+    background-color: darkslategrey;
+    align-content: center;
+}
+.mm{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(39, 8, 80);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.select_make{
+    margin-top: 2px;
+    padding: 1%;
+    font-size: 18px;
+    color: darkblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#submit{
+    font-size: 18px;
+    color: darkblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1%;
+    margin-top: 2px;
+    text-align: center;
+    
+}
+.ma{
+    margin-top: 2px;
+    padding: 1%;
+    font-size: 18px;
+    color: darkblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

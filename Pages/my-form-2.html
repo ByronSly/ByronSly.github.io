@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="form.css">
   <!-- Compiled and minified CSS -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
@@ -12,15 +13,15 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Super Fun Form!</h1>
+  <h1 id="Super">Super Fun Form!</h1>
   <form id="frm1" onsubmit="event.preventDefault(); submitThis(event);" action="somepath/login.php" >
     <fieldset>
-    <legend>Who are you?</legend>
-    <input onchange="onInputChange(event)" id="firstname" type="text" name="firstname" placeholder="First Name" />
+    <legend class="mm">Who are you?</legend>
+    <input onchange="onInputChange(event)" class="select_make" id="firstname" type="text" name="firstname" placeholder="First Name" />
     <br>
-    <input onchange="onInputChange(event)" id="lastname" type="text" name="lastname" placeholder="Last Name" />
+    <input onchange="onInputChange(event)" class="select_make" id="lastname" type="text" name="lastname" placeholder="Last Name" />
     <br>
-    <select onchange="onInputChange(event)" id="select_make" name="model" >
+    <select onchange="onInputChange(event)" id="select_make" name="model" class="select_make">
       <option value="Freshman">Freshman</option>
       <option value="Sophomore">Sophomore</option>
       <option value="Junior">Junior</option>
@@ -29,21 +30,21 @@
     <br>
   </fieldset>
   <fieldset onchange="onInputChange(event)">
-    <legend>Who is your favorite person in this planet?</legend>
-    <input type="checkbox" value="Whomever created this" name="creator"><label>Whomever created this</label>
+    <legend class="mm">Who is your favorite person in this planet?</legend>
+    <input type="checkbox" class="ma" value="Whomever created this" name="creator"><label>Whomever created this</label>
     <br>
-    <input type="checkbox" value="Byron" name="Byron"><label>Byron</label>
+    <input type="checkbox" class="ma" value="Byron" name="Byron"><label>Byron</label>
     <br>
-    <input type="checkbox" value="Sly" name="Sly"><label>Sly</label>
+    <input type="checkbox" class="ma" value="Sly" name="Sly"><label>Sly</label>
     <br>
-    <input type="checkbox" value="All of the above" name="Above"><label>All of the above</label>
+    <input type="checkbox" class="ma" value="All of the above" name="Above"><label>All of the above</label>
     <br>
-    <input type="checkbox" value="Adan because he helped" name="Adan"><label>Adan because he helped</label>
+    <input type="checkbox" class="ma" value="Adan because he helped" name="Adan"><label>Adan because he helped</label>
     <br>
-    <input type="checkbox" value="I plead the 5th" name="fifth"><label>I plead the 5th</label>
+    <input type="checkbox" class="ma" value="I plead the 5th" name="fifth"><label>I plead the 5th</label>
     <br>
   </fieldset>
-    <button type="submit"> Submit </button>
+    <button id="submit" type="submit"> Click Here! </button>
   </form>
   
   <script>
